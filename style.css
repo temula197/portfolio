@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+body{
+  background: #7a3f91;
+  font-size: 18px;
+  color: #f3f4f6;
+}
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+  padding: 1rem 4%;
+  background: #000000;
+  box-shadow: 0 2px 6px #ff9100;
+  width: 100%;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ff9100;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: blue;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 50px 10px 10px;
+  transition: background-color 0.3s;
+}
+/*'active' class for the current page */
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #555;
+  color: #ffd700; /* Gold highlight */
+}
+
+/* Main Content Area */
+.container {
+  width: 100%;
+  background-color: #7a3f91;
+  overflow: hidden;
+  padding: 80px 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ gap: 20px;
+}
+
+/* Section Styling */
+section {
+  background: #7a3f91;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.my h2{
+  margin-top: 20px;
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: linear-gradient(to right, #f1c40f, #e74c3c, #8e44ad, #3498db);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 7s linear infinite;
+}
+
+.my h1{
+  margin-top: 20px;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  background: linear-gradient(to left, #f1c40f, #e74c3c, #8e44ad, #3498db);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 7s linear infinite;
+}
+
+/* all h2 */
+h2 {
+  color: #f7f9fc;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* home Elements Balance */
+.my{
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 70px 9% 0;
+}
+
+@keyframes animate-gradient {
+  to {
+  background-position: 200%;
+  }
+}
+/* increase or decrease of h1 */
+.my-info h1{
+  font-size: 55px;
+}
+
+/* Adds space between icons & Above Paragraph */
+.my-info p{
+  font-size: 1rem;
+  color: #edeef2;
+  line-height: 1.8;
+  max-width: 760px;
+  margin: 12px 0 28px;
+  letter-spacing: 0.01em;
+}
+
+.my-info .btn-sci{
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  margin: 0 8px;
+  text-decoration: none; /* Removes the underline */
+}
+
+/* Style for all Font Awesome icons */
+.fa,
+.fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%; /* Makes the background round */
+  color: white;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Add brand colors for each icon */
+.fa-facebook,
+.fa-facebook-f { background: Green; }
+.fa-instagram { background: Yellow; }
+.fa-telegram,
+.fa-telegram-plane { background: red; }
+.fa-tiktok { background: #3498db; } 
+
+/* Add a hover effect */
+.fa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.fa:hover {
+  opacity: 0.9;
+  transform: translateY(-2px) scale(1.05); /* Slightly enlarges the icon on hover */
+}
+
+.btn{
+  padding: 7px 27px ;
+  background-color: #7a3f91;
+  border: 7px solid #5f555f;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover{
+  background-color: #c59dd9;
+  transform: translateX(5px);
+  transition: 1.2s;
+}
+
+ .sci a {
+  display: inline-flex;
+  padding: 10px;
+  border: 2px solid #5f555f;
+  border-radius: 50% 10% 50% 10%;
+  margin: 0 6px;
+}
+
+.btn-sci .sci a:hover{
+  background-color: #f2eaf7;
+}
+
+.img-box{
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 32vw;
+  height: 32vw;
+  background-color: black;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.img-box .img-item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  /* background: #704242; */
+  border: 50%;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 2px 2px 2px 2px #c59dd9;
+}
+
+.img-item{
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+/* Specific Service Styling (Optional) */
+.service-item {
+  padding: 10px;
+  border-left: 3px solid #007bff;
+  margin-bottom: 10px;
+}
+
+/* Contact Form Styling (Optional) */
+.contact-form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+
+.contact-form input[type="text"],1
+.contact-form input[type="address"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  flex-wrap:wrap;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  background-color: #28a745; /* Green button */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+* --- FOOTER --- */
+.footer{
+  background: #222;
+  color: white;
+  text-align: center;
+} 
+
